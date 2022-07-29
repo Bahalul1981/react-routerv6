@@ -1,6 +1,14 @@
 import React from 'react'
-import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
+
 function Amin() {
+
+  const alalljn=useNavigate();
+
+  const toamin=()=>{
+    alalljn("/")
+   
+  }
   return (
    
     <div>
@@ -8,13 +16,11 @@ function Amin() {
       
       <h1>Hello My name is Bahalul</h1>
       <img src="./image/amin.jpg" alt="" height={500} />
-      <nav>
-            <ul>
-                <li><NavLink to="/">Alvin</NavLink></li>
-                <li><NavLink to="/shoma">shoma</NavLink></li>
-                <li><NavLink to="/amin">amin</NavLink></li>
-            </ul>
-        </nav>
+      <button onClick={toamin}>Go to to Alvin</button>
+     
+   
+
+
     </div>
   )
 }
